@@ -11,26 +11,32 @@ import { HlmPopoverContentDirective } from '@spartan-ng/helm/popover';
 import { HlmLabelDirective } from '@spartan-ng/helm/label';
 import { HlmInputDirective } from '@spartan-ng/helm/input';
 import { provideIcons } from '@ng-icons/core';
+import {MatButtonModule} from '@angular/material/button';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-popup',
-imports: [
+imports: [MatButtonModule,
     BrnPopoverComponent,
     BrnPopoverTriggerDirective,
     BrnPopoverContentDirective,
     HlmPopoverContentDirective,
     HlmButtonDirective,
     HlmLabelDirective,
-    HlmInputDirective,
+    HlmInputDirective,RouterLink
   ],
   template: `
-    <brn-popover sideOffset="5">
-      <button id="edit-profile" variant="outline" brnPopoverTrigger hlmBtn>Open Landing Page</button>
-      <div hlmPopoverContent class="w-150 h-150 grid gap-4" *brnPopoverContent="let ctx">
+    <brn-popover side="bottom" sideOffset="8">
+      <button id="edit-profile" variant="outline" brnPopoverTrigger hlmBtn>Checkout</button>
+      <div hlmPopoverContent class="w-100 h-110 grid gap-4" *brnPopoverContent="let ctx">
         <div class="space-y-2">
-          <h4 class= "flex justify-center text-xl">Welcome to Knowledge Hub</h4>
+          <h5 class= "flex justify-center text-xl">Are you sure you want to checkout?</h5>
         </div>
+
         
+            <button matButton routerLink="/alert" >yes</button>
+
        
       </div>
     </brn-popover>

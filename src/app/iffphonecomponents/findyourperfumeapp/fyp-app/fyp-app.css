@@ -1,0 +1,15 @@
+h1{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+.section {
+  margin-top: 50px; /* or whatever spacing you want */
+  display: flex;
+    justify-content: center;
+}
+
+
+.center{ display: flex;
+    justify-content: center;
+}

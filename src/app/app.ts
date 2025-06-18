@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { MenuBar } from './components/menu-bar/menu-bar';
 import { Bicon } from './components/bicon/bicon';
 import { Loading } from './components/loading/loading';
@@ -17,7 +17,7 @@ import { Toggleg } from './components/toggleg/toggleg';
 
 @Component({
   selector: 'app-root',
-  imports: [MenuBar,Bicon,Loading,Darkswitch,Tablep,Promo,Model,Savetoast, Nextpage,Sidebar,Popup,Toggleg],
+  imports: [MenuBar,Bicon,Loading,Darkswitch,Tablep,Promo,Model,Savetoast, Nextpage,Sidebar,Popup,Toggleg,RouterLink,RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

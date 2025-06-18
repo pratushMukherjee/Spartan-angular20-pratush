@@ -6,11 +6,14 @@ import {
   HlmThComponent,
   HlmTrowComponent,
 } from '@spartan-ng/helm/table';
+import { Promo } from '../promo/promo';
+import { Checkoutbutton } from '../checkoutbutton/checkoutbutton';
+import { Popup } from '../popup/popup';
 
 
 @Component({
   selector: 'app-tablep',
-  imports: [HlmTableComponent, HlmTrowComponent, HlmThComponent, HlmTdComponent, HlmCaptionComponent],
+  imports: [HlmTableComponent, HlmTrowComponent, HlmThComponent, HlmTdComponent, HlmCaptionComponent,Promo,Checkoutbutton,Popup],
   host: {
     class: 'w-full overflow-x-auto',
   },
@@ -34,32 +37,38 @@ import {
         <hlm-td truncate class="w-[100px] font-semibold">Total</hlm-td>
         <hlm-td class="w-40"></hlm-td>
         <hlm-td class="flex-1"></hlm-td>
-        <hlm-td class="justify-end w-40">$357.99</hlm-td>
+        <hlm-td class="justify-end w-40">$512.99</hlm-td>
       </hlm-trow>
-    </hlm-table>`,
+    </hlm-table>
+    
+    
+     <div class="flex justify-center">
+<app-promo></app-promo>
+</div>
+
+ <div class="flex justify-center">
+<app-checkoutbutton></app-checkoutbutton>
+</div>
+
+ <div class="flex justify-center">
+<app-popup></app-popup>
+
+ </div>
+
+
+`,
   styleUrl: './tablep.css'
 })
 export class Tablep {
 
   protected _invoices = [
     {
-      invoice: 'Flowerbomb	',
-      paymentStatus: 'Viktor & Rolf',
-      totalAmount: '$180.00',
+      invoice: ' ralph lauren blue	',
+      paymentStatus: 'Pollo',
+      totalAmount: '$500.00',
       paymentMethod: 'Dominique Ropion, Carlos Benaïm, Olivier Polge',
     },
-    {
-      invoice: 'Calvin Klein Euphoria',
-      paymentStatus: 'Calvin Klein',
-      totalAmount: '$67.99',
-      paymentMethod: 'Carlos Benaïm, Loc Dong',
-    },
-    {
-      invoice: 'Dior Sauvage (EDT)',
-      paymentStatus: 'Dior',
-      totalAmount: '$110',
-      paymentMethod: 'François Demachy',
-    },
+   
  
   ];
 

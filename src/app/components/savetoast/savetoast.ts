@@ -8,7 +8,7 @@ import { HlmButtonDirective } from '@spartan-ng/helm/button';
     imports: [HlmToasterComponent, HlmButtonDirective],
     template: `
         <hlm-toaster />
-        <button hlmBtn (click)="showToast()">Save</button>
+        <button hlmBtn (click)="showToast() ">Save All Changes</button>
     `,
 })
 export class Savetoast {

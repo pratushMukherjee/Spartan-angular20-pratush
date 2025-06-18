@@ -1,0 +1,16 @@
+.frame{
+    position:absolute;
+    top: 20%;
+    left: 40%;
+
+    width: 300px;
+    background-color: rgb(237, 237, 237);
+    height: 500px;
+}
+
+.apponebutton{
+    position: relative;
+    top: 10%;
+    left: 20px;
+    
+}
