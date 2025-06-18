@@ -19,7 +19,7 @@ export class Loading implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.router.navigate(['/polograph']); // Replace with your route path
-    }, 3000); // 3000 ms = 3 seconds
+    }, 5000); // 3000 ms = 3 seconds
   }
 
 }
